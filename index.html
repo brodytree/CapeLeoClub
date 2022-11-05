@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cape Leo Henlopen Club</title>
+	<link rel="icon" type="image/x-icon" href="./Images/favicon.ico">
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<!--NAV BAR-->
+    <nav>
+        <div><a href="/"><img class="nav-image" src="./Images/logo.png" alt="icon" /></a></div>
+        <div class="web-name">Cape Henlopen Leo Club</div>
+        <div class="nav-items">
+            <a href="/">About Us</a>
+            <a href="/">Club Meetings</a>
+            <a href="/">Volunteer Events</a>
+            <a href="/">Gallery</a>
+            <a href="/">Contact</a>
+            <a href="/">Members</a>
+        </div>
+    </nav>
+	
+	
+<!--STICKY NAV SCRIPT-->
+	<script>
+		let scrollpos = window.scrollY
+        const header = document.querySelector("nav")
+		const header_height = header.offsetHeight
+
+		const add_class_on_scroll = () => header.classList.add("sticky")
+        const remove_class_on_scroll = () => header.classList.remove("sticky")
+
+	window.addEventListener('scroll', function() { 
+		scrollpos = window.scrollY;
+
+		if (scrollpos >= header_height - 60) { add_class_on_scroll() }
+		else { remove_class_on_scroll() }
+
+		console.log(scrollpos)
+	})
+	</script>
+	
+	
+<!--HERO-->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="column-left">
+                <h1>Cape Henlopen Leo Club</h1>
+                <p>The Leo Club is an organization that teaches its members to have leadership, experiences, and opportunities.</p>
+                <button>Learn More</button>
+            </div>
+            <div class="column-right">
+                <img src="./Images/hero-img-1.png" alt="illustration" class="hero-image"/>
+            </div>
+        </div>
+    </section>
+	
+	
+<!--TRASH-->
+	<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+	<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+	<h2> SCROLL </h2>
+	
+	
+<!--FOOTER-->
+	<footer class="footing">
+                <p style="font-size:12px;">© 2020 Cape Henlopen Leo Club</p>
+                <p style="font-size:15px;">Website made by <b>Brody Trewartha</b></p>
+        </div>
+    </footer>
+</body>
+</html>
