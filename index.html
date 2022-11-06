@@ -8,67 +8,81 @@
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-<!--NAV BAR-->
+    <!--NAV BAR-->
     <nav>
-        <div><a href="/"><img class="nav-image" src="./Images/logo.png" alt="icon" /></a></div>
+        <div><a href="./index.html"><img class="nav-image" src="./Images/logo.png" alt="icon" /></a></div>
         <div class="web-name">Cape Henlopen Leo Club</div>
         <div class="nav-items">
-            <a href="/">About Us</a>
-            <a href="/">Club Meetings</a>
-            <a href="/">Volunteer Events</a>
-            <a href="/">Gallery</a>
-            <a href="/">Contact</a>
-            <a href="/">Members</a>
+            <a href="./index.html">About Us</a>
+            <a href="./index.html">Club Meetings</a>
+            <a href="./index.html">Volunteer Events</a>
+            <a href="./index.html">Gallery</a>
+            <a href="./index.html">Contact</a>
+            <a href="./index.html">Members</a>
         </div>
     </nav>
-	
-	
-<!--STICKY NAV SCRIPT-->
-	<script>
-		let scrollpos = window.scrollY
+
+
+    <!--STICKY NAV SCRIPT-->
+    <script>
+        let scrollpos = window.scrollY
         const header = document.querySelector("nav")
-		const header_height = header.offsetHeight
+        const header_height = header.offsetHeight
+        header.classList.add("header_normal")
 
-		const add_class_on_scroll = () => header.classList.add("sticky")
-        const remove_class_on_scroll = () => header.classList.remove("sticky")
+        //const add_class_on_scroll = () => header.classList.add("header_sticky").remove("header_normal")
+        //const remove_class_on_scroll = () => header.classList.remove("header_sticky").add("header_normal")
 
-	window.addEventListener('scroll', function() { 
-		scrollpos = window.scrollY;
+        window.addEventListener('scroll', function () {
+            scrollpos = window.scrollY;
 
-		if (scrollpos >= header_height - 60) { add_class_on_scroll() }
-		else { remove_class_on_scroll() }
+            if (scrollpos >= header_height - 90) {
+                header.classList.remove("header_normal")
+                header.classList.add("header_sticky")
+            }
+            else {
+                header.classList.remove("header_sticky")
+                header.classList.add("header_normal")
+            }
 
-		console.log(scrollpos)
-	})
-	</script>
-	
-	
-<!--HERO-->
-    <section class="hero">
-        <div class="hero-container">
-            <div class="column-left">
+            console.log(scrollpos)
+        })
+    </script>
+    <script>
+        if (history.scrollRestoration) {
+            history.scrollRestoration = 'manual';
+        } else {
+            window.onbeforeunload = function () {
+                window.scrollTo(0, 0);
+            }
+        }
+    </script>
+
+    <!--HERO-->
+    <section class="pg1-hero">
+        <div class="pg1-hero-container">
+            <div class="pg1-column-left">
                 <h1>Cape Henlopen Leo Club</h1>
                 <p>The Leo Club is an organization that teaches its members to have leadership, experiences, and opportunities.</p>
-                <button>Learn More</button>
+                <button class="pg1-button">Learn More</button>
+				<button class="pg1-button" style="margin-top:10px" onclick="location.href='./signup.html';">Sign Up</button>
             </div>
-            <div class="column-right">
-                <img src="./Images/hero-img-1.png" alt="illustration" class="hero-image"/>
+            <div class="pg1-column-right">
+                <img src="./Images/hero-img-1.png" alt="illustration" class="pg1-hero-image" />
             </div>
         </div>
     </section>
-	
-	
-<!--TRASH-->
-	<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
-	<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
-	<h2> SCROLL </h2>
-	
-	
-<!--FOOTER-->
-	<footer class="footing">
-                <p style="font-size:12px;">© 2020 Cape Henlopen Leo Club</p>
-                <p style="font-size:15px;">Website made by <b>Brody Trewartha</b></p>
-        </div>
+
+
+    <!--TRASH-->
+    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+    <h2> EXAMPLE </h2>
+
+
+    <!--FOOTER-->
+    <footer class="footing">
+        <p style="font-size:12px;">© 2020 Cape Henlopen Leo Club</p>
+        <p style="font-size:15px;">Website made by <b>Brody Trewartha</b></p>
     </footer>
 </body>
 </html>
