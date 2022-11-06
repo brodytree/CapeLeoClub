@@ -1,76 +1,248 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cape Leo Henlopen Club</title>
-	<link rel="icon" type="image/x-icon" href="./Images/favicon.ico">
-    <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
-    <!--NAV BAR-->
-    <nav>
-        <div><a href="./index.html"><img class="nav-image" src="./Images/logo.png" alt="icon" /></a></div>
-        <div class="web-name">Cape Henlopen Leo Club</div>
-        <div class="nav-items">
-            <a href="./index.html">About Us</a>
-            <a href="./index.html">Club Meetings</a>
-            <a href="./index.html">Volunteer Events</a>
-            <a href="./index.html">Gallery</a>
-            <a href="./index.html">Contact</a>
-            <a href="./index.html">Members</a>
-        </div>
-    </nav>
+:root {
+    --cape: #75b2de;
+}
+
+body {
+	min-height:800px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+nav {
+    height: 120px;
+    width: 100%;
+    background: var(--cape);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem calc((100vw - 1800px) / 2);
+    position: fixed;
+}
+
+.web-name {
+    color: white;
+    font-size: 4.2vmin;
+    font-weight: bold;
+    font-style: normal;
+    padding: 0 2rem;
+    letter-spacing: .2px;
+
+}
+
+.nav-items {
+    color: black;
+    font-size: 2vmin;
+    font-weight: normal;
+    font-style: normal;
+    padding: 0 2rem;
+}
+
+.nav-image {
+    padding: 0 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 0 1.5rem;
+}
+
+nav a:hover {
+    color: black;
+}
+
+/*----------------------------------------------------------------STICKY NAV STYLES----------------------------------------------------------------*/
+nav.header_sticky {
+    animation: nav_scroll .5s normal;
+    height: 55px;
+    background: var(--cape);
+    position: fixed;
+}
+@keyframes nav_scroll {
+    0% {
+        height: 120px;
+    }
+
+    100% {
+        height: 55px;
+    }
+}
+/*--------------------------------*/
+nav.header_sticky .nav-image {
+    animation: nav_image_scroll .5s normal;
+    height: 50px;
+    margin-left: 31px;
+}
+@keyframes nav_image_scroll {
+    0% {
+        height: 115px;
+        margin-left: 0px;
+    }
+
+    100% {
+        height: 50px;
+        margin-left: 31.5px;
+    }
+}
+/*--------------------------------*/
+nav.header_normal {
+    animation: nav_start .5s;
+}
+@keyframes nav_start {
+    0% {
+        height: 55px;
+    }
+
+    100% {
+        height: 120px;
+    }
+}
+/*--------------------------------*/
+nav.header_normal .nav-image {
+    animation: nav_image_normal .5s;
+}
+@keyframes nav_image_normal {
+    0% {
+        height: 50px;
+        margin-left: 31.5px;
+    }
+
+    100% {
+        height: 115px;
+        margin-left: 0px;
+    }
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------------------------PAGE 1 (INDEX)------------------------------------------------*/
+.pg1-hero {
+    background: white;
+}
+
+.pg1-hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 95vh;
+    padding: 3rem calc((100vw - 1300px) / 2);
+}
+
+.pg1-column-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: black;
+    padding: 0rem 2rem;
+}
+
+.pg1-column-left h1 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.pg1-column-left p {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.pg1-column-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 2rem;
+}
+
+.pg1-hero-image {
+    width: 100%;
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------------------------PAGE 2 (SIGNUP)-----------------------------------------------*/
+
+.pg2-hero {
+    background: white;
+}
+.pg2-hero-container {
+    display: grid;
+    grid-template-columns: 2fr 2.5fr 2fr;
+    height: 81vh;
+    padding: 2rem calc((100vw - 1300px) / 2);
+}
+.pg2-column-middle {
+    background: var(--cape);
+    border-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+    align-items: center;
+    padding: 0rem 2rem;
+}
+.pg2-form {
+    width: 100%;
+}
+.pg2-form label {
+    display: flex;
+    margin-top: 38px;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+}
+.pg2-form input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border: 1.5px solid lightgray;
+    border-radius: 6px;
+    outline: none;
+}
+::placeholder {
+    color: lightgray;
+}
+input[type="submit"] {
+    width: 100%;
+    height: 45px;
+    margin-top: 38px;
+    border: none;
+    background-color: #0096FF;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------*/
+.pg1-button {
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    border: none;
+    color: white;
+    background: var(--cape);
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+    button:hover {
+        color: white;
+        opacity: 0.7;
+    }
+
+.footing {
+	height: 75px;
+    background: var(--cape);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem calc((100vw - 1800px) / 2);
+}
 
 
-    <!--SCRIPT RELOAD-->
-    <script>
-        if (history.scrollRestoration) {
-            history.scrollRestoration = 'manual';
-        } else {
-            window.onbeforeunload = function () {
-                window.scrollTo(0, 0);
-            }
-        }
-    </script>
-
-    <!--HERO-->
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <section class="pg2-hero">
-        <div class="pg2-hero-container">
-            <div>
-            </div>
-            <div class="pg2-column-middle">
-                <br>
-                <h1 style="font-size: 40px; color: white;">SignUp</h1>
-                <form class="pg2-form">
-                    <label>First Name</label>
-                    <input type="text" placeholder="First Name">
-                    <label>Last Name</label>
-                    <input type="text" placeholder="Last Name">
-                    <label>Email</label>
-                    <input type="email" placeholder="Email">
-                    <label>Password</label>
-                    <input type="password" placeholder="Password">
-                    <label>Confirm Password</label>
-                    <input type="password" placeholder="Confirm Password">
-                    <input type="submit" value="Create Account">
-                </form>
-                <br>
-                <p>Already have an account? <a href="./index.html" style="color: #0096FF; ">Login here</a></p>
-            </div>
-        </div>
-    </section>
-
-    <!--FOOTER-->
-    <footer class="footing">
-        <p style="font-size:12px;">© 2020 Cape Henlopen Leo Club</p>
-        <p style="font-size:15px;">Website made by <b>Brody Trewartha</b></p>
-    </footer>
-</body>
-</html>
+@media screen and (max-width: 768px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+    }
+}
