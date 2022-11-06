@@ -237,11 +237,14 @@ input[type="submit"]:hover {
 
 .footing {
 	height: 75px;
+    width: 100%;
     background: var(--cape);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0rem calc((100vw - 1800px) / 2);
+    position: absolute;
+    bottom: 0px;
 }
 
 
