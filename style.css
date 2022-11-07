@@ -26,7 +26,7 @@ nav {
 
 .web-name {
     color: white;
-    font-size: 4.2vmin;
+    font-size: 4.2vh;
     font-weight: bold;
     font-style: normal;
     padding: 0 2rem;
@@ -77,11 +77,6 @@ nav.header_sticky .nav-image {
     animation: nav_image_scroll .5s normal;
     height: 50px;
     margin-left: 31px;
-}
-nav.header_sticky .web-name {
-    @media screen and (max-width: 400px) {
-    font-size: 3.6vmin;
-    }
 }
 @keyframes nav_image_scroll {
     0% {
