@@ -3,7 +3,7 @@
 }
 
 body {
-	min-height:800px;
+    min-height: 800px;
 }
 
 * {
@@ -26,7 +26,7 @@ nav {
 
 .web-name {
     color: white;
-    font-size: 1.6vw;
+    font-size: 2.4vw;
     font-weight: bold;
     font-style: normal;
     padding: 0 2rem;
@@ -36,7 +36,7 @@ nav {
 
 .nav-items {
     color: black;
-    font-size: 2vmin;
+    font-size: 1.1vw;
     font-weight: normal;
     font-style: normal;
     padding: 0 2rem;
@@ -52,9 +52,9 @@ nav a {
     padding: 0 1.5rem;
 }
 
-nav a:hover {
-    color: black;
-}
+    nav a:hover {
+        color: black;
+    }
 
 /*----------------------------------------------------------------STICKY NAV STYLES----------------------------------------------------------------*/
 nav.header_sticky {
@@ -63,6 +63,7 @@ nav.header_sticky {
     background: var(--cape);
     position: fixed;
 }
+
 @keyframes nav_scroll {
     0% {
         height: 120px;
@@ -78,6 +79,7 @@ nav.header_sticky .nav-image {
     height: 50px;
     margin-left: 31px;
 }
+
 @keyframes nav_image_scroll {
     0% {
         height: 115px;
@@ -93,6 +95,7 @@ nav.header_sticky .nav-image {
 nav.header_normal {
     animation: nav_start .5s;
 }
+
 @keyframes nav_start {
     0% {
         height: 55px;
@@ -106,6 +109,7 @@ nav.header_normal {
 nav.header_normal .nav-image {
     animation: nav_image_normal .5s;
 }
+
 @keyframes nav_image_normal {
     0% {
         height: 50px;
@@ -140,16 +144,16 @@ nav.header_normal .nav-image {
     padding: 0rem 2rem;
 }
 
-.pg1-column-left h1 {
-    margin-bottom: 1rem;
-    font-size: 3rem;
-}
+    .pg1-column-left h1 {
+        margin-bottom: 1rem;
+        font-size: 3rem;
+    }
 
-.pg1-column-left p {
-    margin-bottom: 2rem;
-    font-size: 1.5rem;
-    line-height: 1.5;
-}
+    .pg1-column-left p {
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
 
 .pg1-column-right {
     display: flex;
@@ -171,20 +175,36 @@ nav.header_normal .nav-image {
     cursor: pointer;
     border-radius: 50px;
 }
+
+.footing-pg1 {
+    height: 75px;
+    width: 100%;
+    background: var(--cape);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem calc((120vw - 1800px) / 2);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: static;
+}
 /*----------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /*--------------------------------------------------------------------------------------PAGE 2 (SIGNUP)-----------------------------------------------*/
 
 .pg2-hero {
     background: white;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
+
 .pg2-hero-container {
     display: grid;
     grid-template-columns: 2fr 2.5fr 2fr;
-    height: 75vh;
+    height: 80vh;
     padding: 2rem calc((100vw - 1300px) / 2);
 }
+
 .pg2-column-middle {
     background: var(--cape);
     border-radius: 0px;
@@ -194,27 +214,32 @@ nav.header_normal .nav-image {
     align-items: center;
     padding: 0rem 2rem;
 }
+
 .pg2-form {
     width: 100%;
 }
-.pg2-form label {
-    display: flex;
-    margin-top: 38px;
-    font-size: 18px;
-    color: white;
-    font-weight: bold;
-}
-.pg2-form input {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border: 1.5px solid lightgray;
-    border-radius: 6px;
-    outline: none;
-}
+
+    .pg2-form label {
+        display: flex;
+        margin-top: 38px;
+        font-size: 18px;
+        color: white;
+        font-weight: bold;
+    }
+
+    .pg2-form input {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border: 1.5px solid lightgray;
+        border-radius: 6px;
+        outline: none;
+    }
+
 ::placeholder {
     color: lightgray;
 }
+
 input[type="submit"] {
     opacity: 1;
     width: 100%;
@@ -226,28 +251,29 @@ input[type="submit"] {
     font-size: 18px;
     text-align: center;
 }
+
 input[type="submit"]:hover {
-    opacity:.6;
+    opacity: .6;
 }
 
-/*----------------------------------------------------------------------------------------------------------------------------------------------------*/
-    button:hover {
-        color: white;
-        opacity: 0.7;
-    }
-
-.footing {
+.footing-pg2 {
     height: 75px;
     width: 100%;
     background: var(--cape);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0rem calc((100vw - 1800px) / 2);
-    /*position: fixed;*/
+    padding: 0rem calc((120vw - 1800px) / 2);
     bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
 }
-
+/*----------------------------------------------------------------------------------------------------------------------------------------------------*/
+button:hover {
+    color: white;
+    opacity: 0.7;
+}
 
 @media screen and (max-width: 768px) {
     .hero-container {
