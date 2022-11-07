@@ -78,6 +78,11 @@ nav.header_sticky .nav-image {
     height: 50px;
     margin-left: 31px;
 }
+nav.header_sticky .web-name {
+    @media screen and (max-width: 400px) {
+    font-size: 3.6vmin;
+    }
+}
 @keyframes nav_image_scroll {
     0% {
         height: 115px;
