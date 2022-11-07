@@ -26,12 +26,12 @@ nav {
 
 .web-name {
     color: white;
-    font-size: 4vw;
+    font-size: 1.6vw;
     font-weight: bold;
     font-style: normal;
     padding: 0 2rem;
     letter-spacing: .2px;
-
+    white-space: nowrap;
 }
 
 .nav-items {
@@ -182,7 +182,7 @@ nav.header_normal .nav-image {
 .pg2-hero-container {
     display: grid;
     grid-template-columns: 2fr 2.5fr 2fr;
-    height: 81vh;
+    height: 75vh;
     padding: 2rem calc((100vw - 1300px) / 2);
 }
 .pg2-column-middle {
@@ -237,7 +237,7 @@ input[type="submit"]:hover {
     }
 
 .footing {
-    height: 75px;
+    height: 65px;
     width: 100%;
     background: var(--cape);
     display: flex;
