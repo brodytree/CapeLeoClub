@@ -182,7 +182,7 @@ nav.header_normal .nav-image {
 
 .pg2-hero {
     background: white;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 .pg2-hero-container {
     display: grid;
