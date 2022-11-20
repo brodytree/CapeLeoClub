@@ -118,6 +118,10 @@ nav .fa{
     .nav-links ul{
         padding: 10%;
     }
+    .course p {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 /*---------- About ----------*/
@@ -131,10 +135,12 @@ h1{
     font-size: 36px;
     font-weight: 600;
 }
-p{
+p {
     color: #777;
     font-size: 14px;
     font-weight: 300;
     line-height: 22px;
     padding: 10px;
+    margin-left: 16vw;
+    margin-right: 16vw;
 }
