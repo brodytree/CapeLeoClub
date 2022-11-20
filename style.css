@@ -9,7 +9,7 @@ html, body {
     -webkit-tap-highlight-color: transparent;
 }
 .header {
-    min-height: 100vh;
+    min-height: 70vh;
     width: 100%;
     background: #75b2de;
     background-position: center;
@@ -92,7 +92,7 @@ nav .fa{
 
 @media(max-width: 700px){
     .text-box h1{
-        font-size: 20px;
+        font-size: 26px;
     }
     .nav-links ul li {
         display: block;
@@ -100,7 +100,7 @@ nav .fa{
     .nav-links {
         position: absolute;
         background: #4c9bd4;
-        height: 100vh;
+        height: 70vh;
         width: 200px;
         top: 0;
         right: -200px;
@@ -118,4 +118,23 @@ nav .fa{
     .nav-links ul{
         padding: 30%;
     }
+}
+
+/*---------- About ----------*/
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
 }
