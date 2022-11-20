@@ -6,6 +6,7 @@
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
 }
 .header {
     min-height: 100vh;
