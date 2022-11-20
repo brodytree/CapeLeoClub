@@ -1,88 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cape Leo Henlopen Club</title>
-	<link rel="icon" type="image/x-icon" href="./Images/favicon.ico">
-    <link rel="stylesheet" href="style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cape Henlopen Leo Club</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <!--NAV BAR-->
-    <nav>
-        <div><a href="./index.html"><img class="nav-image" src="./Images/logo.png" alt="icon" /></a></div>
-        <div class="web-name">Cape Henlopen Leo Club</div>
-        <div class="nav-items">
-            <a href="./index.html">About Us</a>
-            <a href="./index.html">Club Meetings</a>
-            <a href="./index.html">Volunteer Events</a>
-            <a href="./index.html">Gallery</a>
-            <a href="./index.html">Contact</a>
-            <a href="./index.html">Members</a>
-        </div>
-    </nav>
-
-
-    <!--STICKY NAV SCRIPT-->
-    <script>
-        let scrollpos = window.scrollY
-        const header = document.querySelector("nav")
-        const header_height = header.offsetHeight
-        header.classList.add("header_normal")
-
-        //const add_class_on_scroll = () => header.classList.add("header_sticky").remove("header_normal")
-        //const remove_class_on_scroll = () => header.classList.remove("header_sticky").add("header_normal")
-
-        window.addEventListener('scroll', function () {
-            scrollpos = window.scrollY;
-
-            if (scrollpos >= header_height - 90) {
-                header.classList.remove("header_normal")
-                header.classList.add("header_sticky")
-            }
-            else {
-                header.classList.remove("header_sticky")
-                header.classList.add("header_normal")
-            }
-
-            console.log(scrollpos)
-        })
-    </script>
-    <script>
-        if (history.scrollRestoration) {
-            history.scrollRestoration = 'manual';
-        } else {
-            window.onbeforeunload = function () {
-                window.scrollTo(0, 0);
-            }
-        }
-    </script>
-
-    <!--HERO-->
-    <section class="pg1-hero">
-        <div class="pg1-hero-container">
-            <div class="pg1-column-left">
-                <h1>Cape Henlopen Leo Club</h1>
-                <p>The Leo Club is an organization that teaches its members to have leadership, experiences, and opportunities.</p>
-                <button class="pg1-button">Learn More</button>
-				<button class="pg1-button" style="margin-top:10px" onclick="location.href='./signup.html';">Sign Up</button>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="Images/logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">MEETS</a></li>
+                    <li><a href="">EVENTS</a></li>
+                    <li><a href="">CONTACT</a></li>
+                    <li><a href="">MEMBERS</a></li>
+                </ul>
             </div>
-            <div class="pg1-column-right">
-                <img src="./Images/hero-img-1.png" alt="illustration" class="pg1-hero-image" />
-            </div>
-        </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+    <div class="text-box">
+        <h1>Cape Henlopen Leo Club</h1>
+        <p>The Leo Club is an organization that teaches its members to have leadership, experiences, and opportunities. <br>When being involved in this club, members will participate in numerous activities.</p>
+        <a href="" class="hero-btn">Sign Up</a>
+    </div>
     </section>
 
+<!-------JavaScript for Toggle Menu------->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
 
-    <!--TRASH-->
-    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-    <h2> EXAMPLE </h2>
-
-
-    <!--FOOTER-->
-    <footer class="footing-pg1">
-        <p style="font-size:12px;">© 2020 Cape Henlopen Leo Club</p>
-        <p style="font-size:15px;">Website made by <b>Brody Trewartha</b></p>
-    </footer>
 </body>
 </html>
